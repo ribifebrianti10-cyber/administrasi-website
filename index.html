@@ -3,149 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Profil Ribhi Febriayanti, mahasiswa Informatika yang sedang belajar mempublikasikan website.">
-  <title>Ribhi Febriayanti | Profil Mahasiswa</title>
+  <meta name="description" content="Portofolio Ribhi Febriayanti, 21 tahun, mahasiswa Informatika, jomblo akut yang sedang belajar publikasi website.">
+  <title>Ribhi Febriayanti | Portofolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --white: #ffffff;
-      --bg: #fff8fa;
-      --pink-soft: #fde4ec;
-      --pink-mid: #f8c3d4;
-      --pink-deep: #d6457f;
-      --ink: #4a2433;
-      --muted: #82596a;
-      --line: #f6d9e3;
-      --head: "Bricolage Grotesque", "Segoe UI", Arial, sans-serif;
-      --body: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+      --white:#fff; --bg:#fff8fa; --soft:#fde4ec; --mid:#f8c3d4; --deep:#d6457f;
+      --ink:#4a2433; --muted:#82596a; --line:#f6d9e3;
+      --head:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+      --body:"Plus Jakarta Sans","Segoe UI",Arial,sans-serif;
     }
-    *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: var(--body);
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    :focus-visible { outline: 3px solid var(--pink-deep); outline-offset: 3px; border-radius: 4px; }
- 
-    /* Navigasi */
-    nav {
-      position: sticky; top: 0; z-index: 10;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 14px clamp(20px, 5vw, 56px);
-      background: rgba(255,255,255,.92);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid var(--line);
-    }
-    nav strong { font-family: var(--head); color: var(--pink-deep); font-size: 1.05rem; }
-    nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; }
-    nav a { color: var(--ink); text-decoration: none; font-size: .92rem; font-weight: 500; }
-    nav a:hover { color: var(--pink-deep); }
- 
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:var(--body);background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+    :focus-visible{outline:3px solid var(--deep);outline-offset:3px;border-radius:4px}
+    a{color:inherit}
+
+    nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px clamp(20px,5vw,56px);background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    nav strong{font-family:var(--head);color:var(--deep);font-size:1.1rem}
+    nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+    nav a{text-decoration:none;font-size:.92rem;font-weight:500}
+    nav a:hover{color:var(--deep)}
+
     /* Hero */
-    .hero {
-      background: linear-gradient(160deg, var(--pink-soft) 0%, #fff0f5 55%, var(--white) 100%);
-      color: var(--ink);
-      padding: clamp(40px, 8vw, 88px) clamp(20px, 5vw, 56px) clamp(56px, 9vw, 104px);
-    }
-    .hero-inner {
-      max-width: 1000px; margin: 0 auto;
-      display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(28px, 5vw, 64px); align-items: center;
-    }
-    .hero h1 {
-      font-family: var(--head);
-      font-weight: 800;
-      font-size: clamp(2.6rem, 7vw, 4.8rem);
-      line-height: 1.02;
-      letter-spacing: -.03em;
-      margin: 0 0 18px;
-      color: var(--ink);
-    }
-    .hero p { font-size: 1.1rem; max-width: 46ch; margin: 0 0 28px; color: var(--muted); }
-    .badge {
-      display: inline-block; margin-bottom: 20px;
-      padding: 6px 14px; border-radius: 999px;
-      background: var(--white); color: var(--pink-deep);
-      border: 1px solid var(--pink-mid);
-      font-size: .88rem; font-weight: 600;
-    }
-    .btn {
-      display: inline-block; padding: 12px 26px; border-radius: 999px;
-      background: var(--pink-deep); color: var(--white); font-weight: 600; text-decoration: none;
-      box-shadow: 0 8px 20px rgba(214,69,127,.25);
-      transition: transform .15s ease;
-    }
-    .btn:hover { transform: translateY(-2px); }
- 
-    .photo {
-      justify-self: center;
-      width: min(100%, 320px); aspect-ratio: 4 / 5;
-      border-radius: 160px 160px 24px 24px;
-      overflow: hidden;
-      border: 6px solid var(--white);
-      box-shadow: 0 0 0 3px var(--pink-mid), 0 18px 40px rgba(214,69,127,.18);
-      background: var(--pink-mid);
-      display: grid; place-items: center;
-      position: relative;
-    }
-    .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .photo .initials {
-      position: absolute; inset: 0; display: none; place-items: center;
-      font-family: var(--head); font-weight: 800; font-size: 5rem; color: var(--white);
-    }
-    .photo.no-img .initials { display: grid; }
- 
+    .hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--soft),#fff0f5 55%,var(--white));padding:clamp(40px,8vw,84px) clamp(20px,5vw,56px) clamp(60px,9vw,100px)}
+    .hero-inner{position:relative;z-index:1;max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
+    .status{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;padding:7px 16px;border-radius:999px;background:var(--white);border:1px solid var(--mid);color:var(--deep);font-weight:600;font-size:.9rem}
+    .status i{width:9px;height:9px;border-radius:50%;background:var(--deep);animation:blink 1.4s infinite}
+    @keyframes blink{50%{opacity:.25}}
+    h1{font-family:var(--head);font-weight:800;font-size:clamp(2.7rem,7.5vw,5rem);line-height:1;letter-spacing:-.035em;margin:0 0 16px}
+    .role{font-family:var(--head);font-size:clamp(1.1rem,2.4vw,1.45rem);font-weight:500;color:var(--muted);margin:0 0 26px;min-height:2em}
+    .role b{color:var(--deep);font-weight:700}
+    .caret{display:inline-block;width:2px;height:1.1em;background:var(--deep);margin-left:3px;vertical-align:-.2em;animation:blink 1s infinite}
+    .btns{display:flex;flex-wrap:wrap;gap:12px}
+    .btn{display:inline-block;padding:12px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--deep);font-family:var(--body);font-size:1rem;cursor:pointer;transition:transform .15s}
+    .btn:hover{transform:translateY(-2px) rotate(-1deg)}
+    .btn.fill{background:var(--deep);color:var(--white);box-shadow:0 8px 20px rgba(214,69,127,.25)}
+    .btn.line{background:var(--white);color:var(--deep)}
+
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px;padding:0;list-style:none}
+    .chips li{padding:6px 14px;border-radius:999px;background:var(--white);border:1px solid var(--mid);font-size:.92rem;font-weight:600}
+    .chips li:nth-child(2){background:var(--soft)}
+    .ig{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:8px 18px 8px 10px;border-radius:999px;background:var(--white);border:1px solid var(--mid);text-decoration:none;font-weight:600;transition:transform .15s}
+    .ig:hover{transform:translateY(-2px);border-color:var(--deep)}
+    .ig svg{width:30px;height:30px;padding:6px;border-radius:50%;background:var(--deep);color:var(--white)}
+    .ig span{font-size:.95rem}
+
+    /* Polaroid */
+    .polaroid{justify-self:center;width:min(100%,300px);background:var(--white);padding:14px 14px 20px;border-radius:6px;box-shadow:0 18px 40px rgba(214,69,127,.22);transform:rotate(3deg);position:relative;transition:transform .3s}
+    .polaroid:hover{transform:rotate(-1deg) scale(1.02)}
+    .polaroid::before{content:"";position:absolute;top:-14px;left:50%;width:90px;height:28px;margin-left:-45px;background:rgba(248,195,212,.85);transform:rotate(-4deg)}
+    .pic{aspect-ratio:4/5;background:var(--mid);border-radius:3px;overflow:hidden;position:relative;display:grid;place-items:center}
+    .pic img{width:100%;height:100%;object-fit:cover;display:block}
+    .pic .ini{position:absolute;inset:0;display:none;place-items:center;font-family:var(--head);font-weight:800;font-size:5rem;color:var(--white)}
+    .pic.no-img .ini{display:grid}
+    .polaroid figcaption{margin-top:14px;text-align:center;font-family:var(--head);font-weight:700;color:var(--ink)}
+
+    /* Hati melayang */
+    .heart{position:absolute;bottom:-40px;color:var(--mid);font-size:22px;animation:float 9s linear infinite;opacity:0}
+    .heart:nth-child(1){left:6%;animation-delay:0s}
+    .heart:nth-child(2){left:22%;animation-delay:2.5s;font-size:16px}
+    .heart:nth-child(3){left:48%;animation-delay:5s;font-size:26px}
+    .heart:nth-child(4){left:70%;animation-delay:1.5s;font-size:18px}
+    .heart:nth-child(5){left:90%;animation-delay:4s}
+    @keyframes float{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.8}100%{transform:translateY(-560px) rotate(25deg);opacity:0}}
+
+    /* Marquee */
+    .marquee{background:var(--deep);color:var(--white);overflow:hidden;white-space:nowrap;padding:12px 0;font-family:var(--head);font-weight:700;font-size:1.05rem;transform:rotate(-1deg);margin:-14px -10px 0;position:relative;z-index:2}
+    .marquee span{display:inline-block;padding-left:100%;animation:run 22s linear infinite}
+    @keyframes run{to{transform:translateX(-100%)}}
+
     /* Konten */
-    main { max-width: 1000px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px); }
-    section { padding: clamp(40px, 7vw, 72px) 0; border-bottom: 1px solid var(--line); }
-    section:last-child { border-bottom: 0; }
-    .row { display: grid; grid-template-columns: 220px 1fr; gap: clamp(16px, 4vw, 48px); }
-    h2 {
-      font-family: var(--head);
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      letter-spacing: -.02em;
-      line-height: 1.2;
-      margin: 0;
-      color: var(--ink);
+    main{max-width:1000px;margin:0 auto;padding:0 clamp(20px,5vw,56px)}
+    section{padding:clamp(44px,7vw,76px) 0;border-bottom:1px solid var(--line)}
+    section:last-child{border-bottom:0}
+    h2{font-family:var(--head);font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:-.02em;line-height:1.2;margin:0 0 8px}
+    h2::after{content:"";display:block;width:40px;height:4px;margin-top:10px;border-radius:4px;background:var(--mid)}
+    .lead{color:var(--muted);max-width:60ch;margin:14px 0 28px;font-size:1.05rem}
+    .lead strong{color:var(--deep)}
+
+    /* Kartu identitas */
+    .idcard{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--white);border:2px solid var(--mid);border-radius:20px;overflow:hidden}
+    .idcard div{padding:18px 22px;border-bottom:1px dashed var(--mid)}
+    .idcard div:nth-child(odd){border-right:1px dashed var(--mid)}
+    .idcard div:nth-last-child(-n+2){border-bottom:0}
+    .idcard small{display:block;color:var(--muted);font-size:.85rem}
+    .idcard b{font-family:var(--head);font-size:1.25rem}
+    .idcard .hot b{color:var(--deep)}
+    .stamp{display:inline-block;margin-top:4px;padding:2px 12px;border:2px solid var(--deep);border-radius:8px;color:var(--deep);font-family:var(--head);font-weight:800;transform:rotate(-4deg)}
+
+    /* Skill */
+    .skills{display:grid;gap:18px}
+    .skill .top{display:flex;justify-content:space-between;font-weight:600;margin-bottom:6px}
+    .bar{height:14px;background:var(--soft);border-radius:999px;overflow:hidden}
+    .bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--mid),var(--deep));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+    .skill.sad .bar i{background:var(--mid)}
+    .skills.go .bar i{width:var(--w)}
+
+    /* Cek jodoh */
+    .lab{background:var(--white);border:2px solid var(--mid);border-radius:20px;padding:clamp(20px,4vw,34px);text-align:center}
+    .lab .big{font-family:var(--head);font-weight:800;font-size:clamp(1.3rem,3vw,1.8rem);min-height:2.6em;display:grid;place-items:center;margin:0 0 16px}
+    .meter{height:16px;background:var(--soft);border-radius:999px;overflow:hidden;max-width:420px;margin:0 auto 6px}
+    .meter i{display:block;height:100%;width:3%;background:var(--deep);border-radius:999px}
+    .count{color:var(--muted);font-size:.95rem;margin:0 0 20px}
+
+    footer{background:var(--soft);color:var(--muted);text-align:center;padding:30px 20px;font-size:.92rem;border-top:1px solid var(--mid)}
+    footer b{color:var(--deep)}
+
+    @media(max-width:760px){
+      .hero-inner{grid-template-columns:1fr}
+      .polaroid{order:-1;width:min(66%,230px)}
+      .idcard{grid-template-columns:1fr}
+      .idcard div:nth-child(odd){border-right:0}
+      .idcard div:nth-last-child(2){border-bottom:1px dashed var(--mid)}
+      nav ul{gap:12px}
     }
-    h2::after {
-      content: ""; display: block; width: 36px; height: 4px; margin-top: 10px;
-      border-radius: 4px; background: var(--pink-mid);
-    }
-    .row p { margin: 0; max-width: 62ch; font-size: 1.05rem; color: var(--muted); }
-    .row p strong { color: var(--pink-deep); }
- 
-    dl {
-      margin: 0; background: var(--white);
-      border: 1px solid var(--line); border-radius: 16px; padding: 8px 24px;
-    }
-    dl div { display: grid; grid-template-columns: 170px 1fr; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
-    dl div:last-child { border-bottom: 0; }
-    dt { color: var(--muted); font-size: .95rem; }
-    dd { margin: 0; font-weight: 600; }
- 
-    footer {
-      background: var(--pink-soft); color: var(--muted);
-      text-align: center; padding: 28px 20px; font-size: .92rem;
-      border-top: 1px solid var(--pink-mid);
-    }
- 
-    /* Responsif */
-    @media (max-width: 760px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .photo { order: -1; width: min(70%, 240px); }
-      .row { grid-template-columns: 1fr; }
-      dl div { grid-template-columns: 1fr; gap: 2px; }
-      nav ul { gap: 14px; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .btn { transition: none; }
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      .heart,.marquee span,.status i,.caret{animation:none}
+      .heart{opacity:.5}
+      .bar i{transition:none}
+      .btn,.polaroid,.ig{transition:none}
     }
   </style>
 </head>
@@ -153,49 +133,124 @@
   <nav>
     <strong>Ribhi F.</strong>
     <ul>
-      <li><a href="#profil">Profil</a></li>
-      <li><a href="#informasi">Informasi</a></li>
-      <li><a href="#tujuan">Tujuan</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#skill">Skill</a></li>
+      <li><a href="#jodoh">Cek status</a></li>
     </ul>
   </nav>
- 
+
   <header class="hero">
+    <span class="heart" aria-hidden="true">♥</span><span class="heart" aria-hidden="true">♥</span><span class="heart" aria-hidden="true">♥</span><span class="heart" aria-hidden="true">♥</span><span class="heart" aria-hidden="true">♥</span>
     <div class="hero-inner">
       <div>
-        <span class="badge">Praktik Administrasi Website</span>
+        <span class="status"><i></i>Status: jomblo akut</span>
         <h1>Ribhi Febriayanti</h1>
-        <p>Mahasiswa Informatika yang sedang belajar membawa website dari komputer sendiri ke internet.</p>
-        <a class="btn" href="#profil">Kenali saya</a>
+        <p class="role">21 tahun, <b id="typed"></b><span class="caret"></span></p>
+        <ul class="chips">
+          <li>Ceria ☺</li>
+          <li>Baik hati ♥</li>
+          <li>Tidak sombong ✿</li>
+        </ul>
+        <div class="btns">
+          <a class="btn fill" href="#tentang">Kenalan dulu</a>
+          <a class="btn line" href="#jodoh">Cek status saya</a>
+        </div>
+        <a class="ig" href="https://www.instagram.com/ig_rieururinnbhi" target="_blank" rel="noopener" aria-label="Instagram ig_rieururinnbhi, buka di tab baru">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          <span>@ig_rieururinnbhi</span>
+        </a>
       </div>
-      <div class="photo" id="photo">
-        <img src="foto profil.jpeg" alt="Foto Ribhi Febriayanti"
-             onerror="this.style.display='none';document.getElementById('photo').classList.add('no-img')">
-        <span class="initials" aria-hidden="true">RF</span>
-      </div>
+      <figure class="polaroid" style="margin:0 auto">
+        <div class="pic" id="pic">
+          <img src="foto profil.jpeg" alt="Foto Ribhi Febriayanti" onerror="this.style.display='none';document.getElementById('pic').classList.add('no-img')">
+          <span class="ini" aria-hidden="true">RF</span>
+        </div>
+        <figcaption>Ribhi, 21 tahun</figcaption>
+      </figure>
     </div>
   </header>
- 
+
+  <div class="marquee" aria-hidden="true"><span>Belajar hosting ♥ Ngoding sampai pagi ♥ Website sudah online, gebetan belum ♥ Jomblo tapi produktif ♥ Open recruitment: calon pendamping ♥</span></div>
+
   <main>
-    <section id="profil" class="row">
-      <h2>Profil singkat</h2>
-      <p>Halo, saya <strong>Ribhi Febriayanti</strong>. Saat ini saya sedang belajar mempublikasikan website, mulai dari menulis HTML sampai mengunggahnya ke layanan hosting.</p>
+    <section id="tentang">
+      <h2>Kenalan dulu, yuk</h2>
+      <p class="lead">Halo, saya <strong>Ribhi Febriayanti</strong>. Saya sedang belajar mempublikasikan website, dari menulis HTML sampai mengunggahnya ke layanan hosting. Websitenya sudah bisa online, status saya belum. Saya anaknya ceria, baik hati, dan tidak sombong, jadi jangan ragu menyapa lewat Instagram.</p>
+      <div class="idcard">
+        <div><small>Nama</small><b>Ribhi Febriayanti</b></div>
+        <div><small>Umur</small><b>21 tahun</b></div>
+        <div><small>Program studi</small><b>Informatika</b></div>
+        <div><small>Mata kuliah favorit minggu ini</small><b>Administrasi Website</b></div>
+        <div><small>Topik</small><b>Hosting dan publikasi website</b></div>
+        <div class="hot"><small>Status</small><b>Jomblo akut</b><br><span class="stamp">TERSEDIA</span></div>
+      </div>
     </section>
- 
-    <section id="informasi" class="row">
-      <h2>Informasi</h2>
-      <dl>
-        <div><dt>Program studi</dt><dd>Informatika</dd></div>
-        <div><dt>Mata kuliah</dt><dd>Administrasi Website</dd></div>
-        <div><dt>Topik</dt><dd>Hosting dan publikasi website</dd></div>
-      </dl>
+
+    <section id="skill">
+      <h2>Statistik karakter</h2>
+      <p class="lead">Dihitung dengan metode paling ilmiah: perasaan sendiri.</p>
+      <div class="skills" id="skills">
+        <div class="skill"><div class="top"><span>Menulis HTML dan CSS</span><span>80%</span></div><div class="bar"><i style="--w:80%"></i></div></div>
+        <div class="skill"><div class="top"><span>Publikasi website ke hosting</span><span>70%</span></div><div class="bar"><i style="--w:70%"></i></div></div>
+        <div class="skill"><div class="top"><span>Begadang demi tugas</span><span>95%</span></div><div class="bar"><i style="--w:95%"></i></div></div>
+        <div class="skill"><div class="top"><span>Kesabaran menunggu balasan chat</span><span>99%</span></div><div class="bar"><i style="--w:99%"></i></div></div>
+        <div class="skill sad"><div class="top"><span>Peka terhadap kode dari gebetan</span><span>2%</span></div><div class="bar"><i style="--w:2%"></i></div></div>
+      </div>
     </section>
- 
-    <section id="tujuan" class="row">
-      <h2>Tujuan</h2>
-      <p>Halaman ini dibuat sebagai latihan mengunggah HTML ke layanan hosting, sehingga bisa dibuka oleh siapa saja lewat satu alamat web.</p>
+
+    <section id="jodoh">
+      <h2>Mesin pencari jodoh</h2>
+      <p class="lead">Halaman ini dibuat sebagai latihan mengunggah HTML ke hosting. Sambil menunggu, silakan bantu kirim sinyal.</p>
+      <div class="lab">
+        <p class="big" id="msg">Mencari jodoh... 3%</p>
+        <div class="meter"><i></i></div>
+        <p class="count">Sinyal terkirim: <b id="sent">0</b> | Balasan: <b>0</b></p>
+        <button class="btn fill" id="send" type="button">Kirim sinyal ♥</button>
+      </div>
     </section>
   </main>
- 
-  <footer>Website latihan mahasiswa — 2026</footer>
+
+  <footer>Website latihan mahasiswa — 2026 <br>Dibuat oleh <b>Ribhi Febriayanti</b>, jomblo akut tapi tetap semangat ♥<br><a href="https://www.instagram.com/ig_rieururinnbhi" target="_blank" rel="noopener" style="color:var(--deep);font-weight:600">@ig_rieururinnbhi</a></footer>
+
+  <script>
+    // Teks mengetik
+    var words = ["mahasiswa Informatika", "pemula hosting", "calon web admin", "jomblo akut"];
+    var el = document.getElementById("typed"), w = 0, c = 0, del = false;
+    var still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    function type() {
+      var word = words[w];
+      if (still) { el.textContent = words[0]; return; }
+      el.textContent = word.slice(0, c);
+      if (!del && c < word.length) { c++; setTimeout(type, 90); }
+      else if (!del) { del = true; setTimeout(type, 1400); }
+      else if (c > 0) { c--; setTimeout(type, 45); }
+      else { del = false; w = (w + 1) % words.length; setTimeout(type, 300); }
+    }
+    type();
+
+    // Bar skill muncul saat terlihat
+    var sk = document.getElementById("skills");
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (e, o) {
+        if (e[0].isIntersecting) { sk.classList.add("go"); o.disconnect(); }
+      }, { threshold: .3 }).observe(sk);
+    } else { sk.classList.add("go"); }
+
+    // Kirim sinyal
+    var lines = [
+      "Mencari jodoh... 3%",
+      "Sinyal terkirim. Menunggu balasan...",
+      "Error 404: jodoh belum ditemukan",
+      "Dibaca, tapi tidak dibalas",
+      "Server gebetan sedang maintenance",
+      "Tenang, yang penting website sudah online",
+      "Coba restart harapan, lalu kirim lagi"
+    ];
+    var n = 0, sent = document.getElementById("sent"), msg = document.getElementById("msg");
+    document.getElementById("send").addEventListener("click", function () {
+      n++; sent.textContent = n;
+      msg.textContent = lines[n % lines.length];
+    });
+  </script>
 </body>
 </html>
